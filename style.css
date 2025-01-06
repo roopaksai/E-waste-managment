@@ -1,0 +1,140 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #d4efdf, #a9dfbf);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#app {
+  background: #8d6e63;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 350px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+h1 {
+  text-align: center;
+  color: #018c08;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+button {
+  background: #6d4c41;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+button:hover:not(:disabled) {
+  background: #5d4037;
+}
+
+button:disabled {
+  background: #a1887f;
+  cursor: not-allowed;
+}
+
+/* Styled Upload Button */
+#picture {
+  display: none;
+}
+
+#pictureLabel {
+  display: inline-block;
+  background: #5c6bc0;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+  transition: background 0.3s ease-in-out;
+}
+
+#pictureLabel:hover {
+  background: #3f51b5;
+}
+
+.feedback {
+  font-size: 12px;
+  color: #018c08;
+  margin-top: -8px;
+  margin-bottom: 10px;
+}
+
+/* Adjusted Pincode Component */
+#pincode {
+  width: 80%; /* Adjusted width to fit inside the box */
+  margin: 10px auto; /* Centered the input field */
+  display: block;
+}
+
+#getLocation {
+  width: 80%; /* Match the button width to the pincode input */
+  margin: 10px auto; /* Center the button */
+  display: block;
+}
+
+#toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: slideIn 0.5s ease-out;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

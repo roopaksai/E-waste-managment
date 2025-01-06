@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Waste Management</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div id="app">
+    <h1>E-Waste Management</h1>
+
+    <!-- Picture Input -->
+    <label id="pictureLabel" for="picture">Upload Picture</label>
+    <input type="file" id="picture" accept="image/*">
+    <p id="pictureFeedback" class="feedback"></p>
+
+    <!-- Pincode Input -->
+    <label for="pincode">Enter Pincode:</label>
+    <input type="text" id="pincode" placeholder="Enter pincode">
+    <button id="getLocation" disabled>Get Location</button>
+    <p id="pincodeFeedback" class="feedback"></p>
+
+    <!-- Location Details -->
+    <div id="locationInfo" class="hidden">
+      <p><strong>Location Name:</strong> <span id="locationName"></span></p>
+      <p>Select Area:</p>
+      <select id="areaSelect">
+        <option value="">--Select Area--</option>
+      </select>
+      <button id="updateLocation" disabled>Update Location</button>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="hidden">
+    <i class="fas fa-check-circle"></i>
+    <span id="toastMessage"></span>
+  </div>
+</body>
+</html>
